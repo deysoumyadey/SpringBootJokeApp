@@ -1,6 +1,7 @@
 package com.som.example.SpringBootJokeApp.Controller;
 
 import com.som.example.SpringBootJokeApp.Service.ChuckNorrisRandomQuotes;
+import com.som.example.SpringBootJokeApp.Service.ChuckNorrisRandomQuotesImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,7 @@ public class MyJokesController {
 
     @RequestMapping("/jokes")
     public String getJokes(Model model){
-        model.addAttribute("jokes", chuckNorrisRandomQuotes.getRandomQuote());
+        model.addAttribute("jokes", chuckNorrisRandomQuotes.getJoke());
         return "jokes";
     }
 }
