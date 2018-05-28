@@ -8,9 +8,13 @@ public class ChuckNorrisRandomQuotesImpl implements ChuckNorrisRandomQuotes {
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public ChuckNorrisRandomQuotesImpl() {
-        this.chuckNorrisQuotes =  new ChuckNorrisQuotes();
+    public ChuckNorrisRandomQuotesImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
+
+    /*public ChuckNorrisRandomQuotesImpl() {
+        this.chuckNorrisQuotes =  new ChuckNorrisQuotes();
+    }*/
 
     @Override
     public String getJoke() {
