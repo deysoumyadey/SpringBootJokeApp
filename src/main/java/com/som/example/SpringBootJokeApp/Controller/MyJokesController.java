@@ -18,6 +18,6 @@ public class MyJokesController {
     @RequestMapping("/jokes")
     public String getJokes(Model model){
         model.addAttribute("jokes", chuckNorrisRandomQuotes.getJoke());
-        return "jokes";
+        return "ChuckNorris";
     }
 }
